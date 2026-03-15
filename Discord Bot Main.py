@@ -13,9 +13,6 @@ import asyncio
 from photoCog import pictureCog
 from musicCog import musicCog
 
-
-
-
 client = commands.Bot(command_prefix = "v!")
 
 @client.event
