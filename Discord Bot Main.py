@@ -102,13 +102,6 @@ async def poll(ctx,*, question = "Undefined"):
     await discord.Message.add_reaction(botMessage, emoji="\U0001F44D")
     await discord.Message.add_reaction(botMessage, emoji="\U0001F44E")
 
-
-
-
-    
-
-
-
 @client.command()
 
 async def nick(ctx, member:discord.Member,*, name = "Undefined"):
