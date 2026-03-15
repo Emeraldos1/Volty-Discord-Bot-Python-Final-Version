@@ -10,8 +10,6 @@ import youtube_dl
 import os
 import random
 import asyncio
-from pornhub_api import PornhubApi
-from pornhub_api.backends.aiohttp import AioHttpBackend
 from photoCog import pictureCog
 from musicCog import musicCog
 
@@ -293,13 +291,6 @@ async def pause(ctx):
     game = discord.Game("Nikiera looks like Leshawna")
     await client.change_presence(activity=game)
 
-
-
-
-@client.command()
-async def porny(ctx,*, member:discord.Member):
-    await ctx.send(f"STOP BEING PORNY {member}!")
-
 @client.command()
 async def say(ctx, *, message):
     await ctx.message.delete()
@@ -312,44 +303,9 @@ async def fiverr(ctx):
     await ctx.send("If you want something like this, request me to do one for you on fiverr - all for cheap prices!")
 
 
-
-@client.command()
-async def porn(ctx,*, video):
-    api = PornhubApi()
-
-    data = api.search.search(video, ordering="mostviewed")
-
-    data = data.videos[0]
-
-    await ctx.send(f"{data.title}: {data.url}")
-
-
 client.add_cog(pictureCog())
 
 client.add_cog(musicCog())
-
-
-
-       
-
-            
-
- 
-
-
-
-
-
-
-
-
-       
-
-
-
-
-
-
 
 
 
