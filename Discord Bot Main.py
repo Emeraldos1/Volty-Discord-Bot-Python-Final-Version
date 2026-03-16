@@ -213,7 +213,7 @@ async def gif(ctx,*, search):
 
     params = {}
     
-    r = requests.get(url=f"https://api.giphy.com/v1/gifs/search?api_key=xEydZo9zuGvVA8cv1OrvUBLtrINtZbKL&q={search}&limit=25&offset=0&rating=G&lang=en")
+    r = requests.get(url=f"https://api.giphy.com/v1/gifs/search?api_key={os.getenv('GIPHY_API_KEY')}&q={search}&limit=25&offset=0&rating=G&lang=en")
 
     r = json.loads(r.content)
 
@@ -290,7 +290,7 @@ client.add_cog(musicCog())
 
 
 
-client.run("NjYzNDE2NjgxNjMyMTA0NDY4.XwAd_g.3BjrtsuvjHrIE1nYcmIv2fF3N84")
+client.run(os.getenv("DISCORD_TOKEN"))
 
 
 
